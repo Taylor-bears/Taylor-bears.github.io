@@ -21,7 +21,10 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', helvetica, arial, sans;
+    min-height: 100vh;
 }
 blockquote, q {
     quotes: none;
@@ -54,7 +57,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    font-family: helvetica, arial, sans;
+    font-family: 'Open Sans', helvetica, arial, sans;
     min-height: 100vh;
 }
 .content-container {
@@ -88,6 +91,10 @@ h2 ~ p {
     margin: 1em auto 0;
     max-width: 70%;
     text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', helvetica, sans;
+    font-weight: 100;
 }
 
 /* HEADER STYLES */
@@ -321,15 +328,16 @@ h2 ~ p {
     color: #fff;
     display: inline-block;
     font-family: helvetica, arial, sans;
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    height: 2.5em;
+    height: 1.5em;
     line-height: 1;
-    padding-top: 0.85em;
+    padding-top: 0.25em;
     text-align: center;
     text-decoration: none;
+    text-indent: 1px;
     vertical-align: middle;
-    width: 2.5em;
+    width: 1.5em;
 }
 .social-list > li {
     display: inline-block;
