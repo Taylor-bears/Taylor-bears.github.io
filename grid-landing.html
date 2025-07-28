@@ -36,6 +36,13 @@
         .grid_3-7 {
             grid-column: 3 / 7;
         }
+        .grid_4-6 {
+            grid-column: 4 / 6;
+        }
+        .grid_cols-3max {
+            grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+            grid-gap: 3em;
+        }
         .header {
             background-color: #000;
             color: #fff;
@@ -54,6 +61,7 @@
             color: #a8d6f7;
         }
         .hero {
+            align-content: center;
             background-color: #a8d6f7;
             min-height: 50vh;
             text-align: center;
@@ -75,10 +83,35 @@
         .feature {
             min-height: 70vh;
         }
+        .feature_img {
+            background-image: url('/images/shark.jpg');
+            background-size: cover;
+            grid-column: 1 / 9;
+            grid-row: 1 / 2;
+        }
+        .feature_content {
+            background-color: #183a53;
+            color: #fff;
+            grid-row-start: 1;
+            margin: 4em 0;
+            padding: 2em 2em;
+        }
+        .feature_content-1 {
+            align-self: start;
+            grid-column: 2 / 6;
+        }
+        .feature_content-2 {
+            align-self: end;
+            grid-column: 5 / 8;
+        }
 
         .footer {
             background-color: #ddd;
+            justify-items: center;
             padding: 4em 1em;
+        }
+        .footer_menu-first {
+            grid-column-start: 3;
         }
     </style>
 </head>
@@ -103,41 +136,61 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h1 class="hero_title">
+<section class="hero grid">
+    <h1 class="hero_title grid_2-8">
         I am an Important Message
     </h1>
-    <div class="hero_content">
+    <div class="hero_content grid_4-6">
         And I am a less important, but still a very important
         thing to consider.
+        <div class="landing_cta">
+            <a href="">
+                Click me!
+            </a>
+        </div>
     </div>
 </section>
 
-<section class="options">
-    <h2 class="options_title">
+<section class="options grid grid_2-8">
+    <h2 class="options_title grid_2-8">
         Here are Some Choices
     </h2>
-    <div class="options_content">
+    <div class="options_content grid grid_2-8 grid_cols-3max">
         <div>
-            Stuff
+            <img src="/images/small/slide1.jpg" class="options_item-img">
+            <div class="options_item-title">Stuff</div>
+            <p>
+                In some high land of lakes. Take almost any path
+                you please, and ten to one it carries you down in a dale.
+            </p>
         </div>
         <div>
-            Different Stuff
+            <img src="/images/small/slide1.jpg" class="options_item-img">
+            <div class="options_item-title">Different Stuff</div>
+            <p>
+                Leaves you there by a pool in the stream. There is
+                magic in it.
+            </p>
         </div>
         <div>
-            All the Stuff
+            <img src="/images/small/slide1.jpg" class="options_item-img">
+            <div class="options_item-title">All the Stuff</div>
+            <p>
+                Set his feet a-going, and he will infallibly lead
+                you to water, if water there be in all that region.
+            </p>
         </div>
     </div>
 </section>
 
-<section class="info">
-    <h2 class="info_title">
+<section class="info grid">
+    <h2 class="info_title grid_2-8">
         I am Some More info
     </h2>
-    <div class="subtitle">
+    <div class="subtitle grid_4-6">
         Say you are in the country.
     </div>
-    <div class="info_content">
+    <div class="info_content grid_3-7">
         <p>
             In some high land of lakes. Take almost any path you
             please, and ten to one it carries you down in a dale,
@@ -150,7 +203,7 @@
     </div>
 </section>
 
-<section class="feature">
+<section class="feature grid">
     <div class="feature_img"></div>
     <div class="feature_content feature_content-1">
         Let the most absent-minded of men be plunged in his
@@ -165,8 +218,8 @@
     </div>
 </section>
 
-<footer class="footer">
-    <h3 class="footer_title">
+<footer class="footer grid">
+    <h3 class="footer_title grid_2-8">
         I am a Footer
     </h3>
     <ul class="menulist footer_menu-first">
